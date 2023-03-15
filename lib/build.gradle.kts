@@ -21,7 +21,7 @@ android {
   compileSdk = 33
 
   defaultConfig {
-    minSdk = 24   
+    minSdk = 24
     targetSdk = 33
     consumerProguardFiles("consumer-rules.pro")
   }
@@ -38,17 +38,16 @@ android {
     targetCompatibility = JavaVersion.VERSION_11
   }
 
-  buildFeatures { 
-    viewBinding = true
-  }
+  buildFeatures { viewBinding = true }
 
   sourceSets {
     val sourceSetsFile = file("${project.projectDir}/source_sets")
-    val sourceSets = if (sourceSetsFile.exists()) {
-      sourceSetsFile.readLines()
-    } else {
-      emptyList()
-    }
+    val sourceSets =
+      if (sourceSetsFile.exists()) {
+        sourceSetsFile.readLines()
+      } else {
+        emptyList()
+      }
 
     val buildTypes = arrayOf("main", "debug")
 
@@ -91,12 +90,15 @@ publishing {
       url = uri("https://maven.pkg.github.com/OWNER/REPOSITORY")
       credentials {
         // TODO: Add the properties for githubPackagesUser and githubPackagesPassword
-        username = providers.gradleProperty("githubPackagesUser").getOrElse(System.getenv("GH_USERNAME"))
-        password = providers.gradleProperty("githubPackagesPassword").getOrElse(System.getenv("GH_TOKEN"))
+        username =
+          providers.gradleProperty("githubPackagesUser").getOrElse(System.getenv("GH_USERNAME"))
+        password =
+          providers.gradleProperty("githubPackagesPassword").getOrElse(System.getenv("GH_TOKEN"))
       }
     }
   }
 }
+
 dependencies {
   implementation(libs.androidx.appcompat)
   implementation(libs.androidx.constraintlayout)

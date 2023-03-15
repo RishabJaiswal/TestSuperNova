@@ -21,5 +21,7 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "TestSuperNova"
 
 include(":playground")
+
 include(":lib")
+
 include(":lint")

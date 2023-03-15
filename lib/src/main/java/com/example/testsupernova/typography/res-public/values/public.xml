@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <!--  Styles-->
-  <public name="TextAppearance.Testsupernova.BodyNormal" type="style" />
+	<!--  Styles-->
+	<public name="TextAppearance.Testsupernova.BodyNormal" type="style" />
 
-  <!--  Attributes-->
-  <public name="textAppearanceBodyNormal" type="attr" />
+	<!--  Attributes-->
+	<public name="textAppearanceBodyNormal" type="attr" />
 
 </resources>

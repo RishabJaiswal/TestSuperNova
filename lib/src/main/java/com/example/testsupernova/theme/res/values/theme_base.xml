@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <style name="Base.Theme.Testsupernova" parent="Theme.AppCompat.DayNight.NoActionBar">
-    <item name="textAppearanceBodyNormal">@style/TextAppearance.Testsupernova.BodyNormal</item>
+	<style name="Base.Theme.Testsupernova" parent="Theme.AppCompat.DayNight.NoActionBar">
+		<item name="textAppearanceBodyNormal">@style/TextAppearance.Testsupernova.BodyNormal</item>
 
-  </style>
+	</style>
 
 </resources>

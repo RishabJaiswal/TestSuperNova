@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.example.testsupernova.playground.databinding.ActivityMainBinding
 import com.example.testsupernova.playground.DlsComponentType.TypographyComponent
+import com.example.testsupernova.playground.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
