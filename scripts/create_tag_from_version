@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Create a tag from `publishing.version` in `gradle.properties` file
+
+set -eou pipefail
+currentVersion=$(git show HEAD:gradle.properties | grep publishing.version  | cut -d'=' -f2)
+
+git tag v"$currentVersion"
+git push origin v"$currentVersion"

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Checks if `publishing.version` in `gradle.properties` file has been incremented
+# When version is not incremented, this script fails (exits with status code 1)
+# This script is used to automatically create a release from `main` branch
+
+set -eou pipefail
+currentVersion=$(git show HEAD:gradle.properties | grep publishing.version  | cut -d'=' -f2)
+previousVersion=$(git show HEAD~1:gradle.properties | grep publishing.version  | cut -d'=' -f2)
+
+if [[ $currentVersion > $previousVersion ]]; then
+  echo "Version incremented to $currentVersion"
+  exit 0
+else
+  echo "No version increment!! Current: $currentVersion, Previous: $previousVersion"
+  exit 1
+fi
